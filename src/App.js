@@ -7,15 +7,27 @@ import {handleError} from "./apiUtils"
 function App() {
   const [user, setUser] = React.useState(null)
 
-  function login(userCredentials, setError) {
+  function login(userCredentials, setError, push) {
     facade
       .login(userCredentials)
-      .then(user => setUser({username: user.username}))
+      .then(user => {
+        push("/")
+        setUser({username: user.username})
+      })
       .catch(error => handleError(error, setError))
   }
 
+  function logout() {
+    facade.logout()
+    setUser(null)
+  }
+
   // Whenever the user changes the app is rerendered
-  return user ? <AuthenticatedApp /> : <UnauthenticatedApp />
+  return user ? (
+    <AuthenticatedApp user={user} logout={logout} />
+  ) : (
+    <UnauthenticatedApp login={login} />
+  )
 }
 
 export default App

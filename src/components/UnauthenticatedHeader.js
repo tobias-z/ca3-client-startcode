@@ -2,7 +2,7 @@ import * as React from "react"
 import {Nav, Navbar} from "react-bootstrap"
 import {LinkContainer} from "react-router-bootstrap"
 
-function Header() {
+function UnauthenticatedHeader() {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <LinkContainer to="/">
@@ -11,8 +11,11 @@ function Header() {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
-          <LinkContainer to="/">
+          <LinkContainer exact to="/">
             <Nav.Link>Home</Nav.Link>
+          </LinkContainer>
+          <LinkContainer to="/muchdata">
+            <Nav.Link>Much data</Nav.Link>
           </LinkContainer>
         </Nav>
         <Nav>
@@ -25,4 +28,4 @@ function Header() {
   )
 }
 
-export default Header
+export default UnauthenticatedHeader

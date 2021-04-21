@@ -1,5 +1,7 @@
-const USER_BASE = "http://localhost:8080/security/api"
-const INFO_BASE = "http://localhost:8080/security/api/info/"
+const USER_BASE =
+  "https://peterrambeckandersen.com/tomcat/insession-starter/api"
+const INFO_BASE =
+  "https://peterrambeckandersen.com/tomcat/insession-starter/api/info"
 
 const USER = {
   LOGIN: `${USER_BASE}/login`,
