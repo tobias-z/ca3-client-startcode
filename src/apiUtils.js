@@ -1,4 +1,4 @@
-import {isLoggedIn, getToken} from "./apiFacade"
+import {isLoggedIn, getToken} from "./facades/userFacade"
 
 function makeOptions(method, addToken, body) {
   var opts = {
