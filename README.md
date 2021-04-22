@@ -43,6 +43,8 @@ _This setup requires some knowledge of Nginx_
 2. `cd /etc/nginx/sites-enabled`
 3. `nano default`
 - In this file, change the root file to point to the file you are going to create afterwards `root /var/www/xxx/;`
+- Save the file and exit it.
+- Run the command `service nginx restart`
 4. `cd /var/www`
 5. `mkdir xxx`
 6. `chmod -R 777 xxx`
