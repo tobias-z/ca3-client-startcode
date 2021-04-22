@@ -32,7 +32,7 @@ This means that you have full control over which routes you'd like to show the u
 We have two ways to deploy our application:
 
 ### Deploy with Surge
-If you do not have surge install run `run install -g surge`
+If you do not have surge installed run `npm install -g surge`
 1. `npm run build`
 2. `surge --project ./build --domain A_DOMAIN_NAME.surge.sh`
 
